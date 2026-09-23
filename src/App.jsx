@@ -12,8 +12,8 @@ function App() {
       <Nav />
       <Header />     
 
-      <div className="container">
-        <div className="row">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Article 
             title="Festival Paris"
             img={{

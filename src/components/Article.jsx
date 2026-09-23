@@ -8,21 +8,21 @@
 
 function Article({title, img, text, categories, tags}) {
     return (
-        <div className="col-sm-4 mb-3">
-            <div className="article border">
+        <div>
+            <div className="border rounded h-full">
                 <div className="bloc-img">
-                    <img src={img.src} className="img-fluid" alt={img.alt} />
+                    <img src={img.src} className="w-full h-48 object-cover" alt={img.alt} />
                 </div>
-                <div className="bloc-article p-2">
-                    <h2 className="my-3">{title}</h2>
+                <div className="p-3">
+                    <h2 className="text-2xl font-semibold my-3">{title}</h2>
                     { categories && categories.map((name, index) => (
-                        <a href={"/keyword/" + name} className="btn btn-outline-dark me-3" key={index}>{name}</a>
+                        <a href={"/keyword/" + name} className="inline-block border border-gray-800 rounded px-2 py-1 mr-2 mb-2 text-sm" key={index}>{name}</a>
                     ) )}
-                    <hr />
+                    <hr className="my-2" />
                     { tags && tags.map((tag) => (
-                        <a href={`/tag/${tag.slug}`} className="btn btn-dark me-3" key={tag.id}>{tag.name}</a>
+                        <a href={`/tag/${tag.slug}`} className="inline-block bg-gray-800 text-white rounded px-2 py-1 mr-2 mb-2 text-sm" key={tag.id}>{tag.name}</a>
                     ) )}
-                    <hr />
+                    <hr className="my-2" />
                     <p>
                         {text}
                     </p>

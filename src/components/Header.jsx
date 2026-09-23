@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <header className="p-5">
-      <h1 className="mb-5 border-bottom text-center pb-3">Mon Blog</h1>
+    <header className="p-10">
+      <h1 className="text-5xl font-bold text-center border-b pb-4">Mon Blog</h1>
     </header>
   )
 }
